@@ -26,10 +26,9 @@ collections:
       - { name: body, label: Body, widget: markdown }
   - name: key
     label: keys
-    folder: src/content/posts
+    folder: src/content/keys
     create: true
     format: frontmatter
-    preview_path: post/{{slug}}
     fields:
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
