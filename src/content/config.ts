@@ -12,3 +12,14 @@ const postsCollection = defineCollection({
 });
 
 export const collections = { posts: postsCollection };
+
+
+const keysCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    body: z.string(),
+  }),
+});
+
+export const keys = { keys: keysCollection };

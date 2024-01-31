@@ -12,6 +12,7 @@ import presentation from "@/data/presentation";
 import projects from "@/data/projects";
 
 const posts = await getCollection("posts");
+const keys = await getCollection("keys");
 ---
 
 <Layout>
@@ -20,8 +21,9 @@ const posts = await getCollection("posts");
       <h1 class="text-3xl text-neutral-100">{presentation.title}</h1>
       <h2
         class="max-w-[60ch] leading-6"
-        set:html={convertAsteriskToStrongTag(presentation.description)}
-      />
+        
+      >{keys[0].body}
+</h2>
       <SocialLinks />
     </article>
 
